@@ -5,7 +5,7 @@
 .magpie-view-stimulus-container {
     height: auto;
     max-height: 350px;
-} 
+}
 
 /* Display all titles in red */
 /*.magpie-view-title {
@@ -17,6 +17,7 @@
    border: 1px solid powderblue;
 }
 
-/* .magpie-view-stimulus-container{
-
-} */
+/* extend space for view question */
+.magpie-view-question{
+  padding: 50px;
+}

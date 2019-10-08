@@ -11,9 +11,7 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 
 /* Helper functions*/
 // function takes main trials as input
-function create_practice_trials(b) {
-
-  var old_trials = b;
+function create_practice_trials(old_trials) {
 
   var trials = [];
   var i = 0;
@@ -36,24 +34,21 @@ function create_practice_trials(b) {
 };
 
 
-function create_main_trials(b) {
-
-  var old_main_trials = b;
+function create_main_trials(old_trials) {
 
   var trials = [];
   var i = 0;
 
-  for (var k = 0; k < old_main_trials.length; k++) {
-    if ((old_main_trials[k].condition == 0) || (old_main_trials[k].condition == 6) || (old_main_trials[k].condition == 9)) {
-
+  for (var k = 0; k < old_trials.length; k++) {
+    if ((old_trials[k].condition == 0) || (old_trials[k].condition == 6) || (old_trials[k].condition == 9)) {
       trials[i] = {
         option1: "false",
         option2: "true",
-        question: old_main_trials[k].sentence,
-        type: old_main_trials[k].type,
-        condition: old_main_trials[k].condition,
-        vignette: old_main_trials[k].vignette,
-        expectedAnswer: old_main_trials[k].expectedAnswer
+        question: old_trials[k].sentence,
+        type: old_trials[k].type,
+        condition: old_trials[k].condition,
+        vignette: old_trials[k].vignette,
+        expectedAnswer: old_trials[k].expectedAnswer
       };
       i += 1;
     }
@@ -62,7 +57,6 @@ function create_main_trials(b) {
 
 };
 
-//|| "6" || "9" || "none"
 
 
 /* For generating random participant IDs */

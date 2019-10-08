@@ -1,25 +1,5 @@
 // In this file you can specify the trial data for your experiment
 
-
-const trial_info = {
-  forced_choice: [
-    {
-      question: "What's on the bread?",
-      picture: "images/question_mark_02.png",
-      option1: 'jam',
-      option2: 'ham',
-      correct: 'jam'
-        },
-    {
-      question: "What's the weather like?",
-      picture: "images/weather.jpg",
-      option1: "shiny",
-      option2: "rainbow",
-      correct: "shiny"
-        }
-    ]
-};
-
 var practice_trials = [
   {
     statements: "Spain is a country in Asia.",
@@ -1388,15 +1368,6 @@ var main_trials = [
 
 ];
 
-const practice_trial_new = create_practice_trials(practice_trials);
+const practice_trial_new = _.shuffle(create_practice_trials(practice_trials));
 
-const main_trial_new = create_main_trials(main_trials);
-
-
-console.log(main_trials[1].vignette);
-console.log(main_trial_new[1]);
-console.log(main_trial_new);
-
-// trial_block = _.flatten(_.map(main_trials, function (x) {
-//         return (create_trials(main_trials));
-//       }
+const main_trial_new = _.shuffle(create_main_trials(main_trials));
