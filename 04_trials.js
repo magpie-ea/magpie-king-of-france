@@ -1392,7 +1392,7 @@ const practice_trial_new = create_practice_trials(practice_trials);
 
 const main_trial_new = create_main_trials(main_trials);
 console.log(main_trials[1].vignette);
-//console.log(main_trial_new[1].condition);
+console.log(main_trial_new[1]);
 console.log(main_trial_new);
 
 // trial_block = _.flatten(_.map(main_trials, function (x) {

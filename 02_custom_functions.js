@@ -44,7 +44,8 @@ function create_main_trials(b) {
   var i = 0;
 
   for (var k = 0; k < old_main_trials.length; k++) {
-    if (old_main_trials[k].vignette == "none") {
+    if ((old_main_trials[k].vignette == "none") || (old_main_trials[k].vignette == 0) || (old_main_trials[k].vignette == 6) || (old_main_trials[k].vignette == 9)) {
+
       trials[i] = {
         option1: "false",
         option2: "true",
@@ -59,29 +60,9 @@ function create_main_trials(b) {
   }
   return (trials);
 
-
 };
 
 //|| "6" || "9" || "none"
-
-// let t1 = {};
-//
-// for (var i = 0; i < main_trials.length; i++) {
-//
-//   if (main_trials.vignette[i] == "0" || "6" || "9" || "none") {
-//     //choice_main_trials[i] = main_trials[i]
-//     t1.option1 = "false";
-//     t1.option2 = "true";
-//     t1.question = b.sentence;
-//     t1.type = b.type;
-//     t1.condition = b.condition;
-//     t1.vignette = b.vignette;
-//     t1.expectedAnswer = b.expectedAnswer;
-//   }
-// }
-// return t1;
-//}
-
 
 
 /* For generating random participant IDs */
