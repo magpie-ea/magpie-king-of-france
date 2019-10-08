@@ -21,7 +21,6 @@ $("document")
             practice_block,
             instructions2,
             main_block,
-            forced_choice_2A,
             post_test,
             thanks,
         ],
@@ -40,7 +39,9 @@ $("document")
       progress_bar: {
         in: [
                 // list the view-names of the views for which you want a progress bar
-                forced_choice_2A.name,
+
+              practice_block.name,
+              main_block.name,
             ],
         // Possible styles are "default", "separate" and "chunks"
         style: "separate",
