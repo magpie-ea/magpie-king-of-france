@@ -44,7 +44,7 @@ function create_main_trials(b) {
   var i = 0;
 
   for (var k = 0; k < old_main_trials.length; k++) {
-    if ((old_main_trials[k].vignette == "none") || (old_main_trials[k].vignette == 0) || (old_main_trials[k].vignette == 6) || (old_main_trials[k].vignette == 9)) {
+    if ((old_main_trials[k].condition == 0) || (old_main_trials[k].condition == 6) || (old_main_trials[k].condition == 9)) {
 
       trials[i] = {
         option1: "false",
