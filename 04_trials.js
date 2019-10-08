@@ -1388,11 +1388,13 @@ var main_trials = [
 
 ];
 
-var choice_main_trials;
+const practice_trial_new = create_practice_trials(practice_trials);
 
-for (var i = 0; i < main_trials.length; i++) {
+const main_trial_new = create_main_trials(main_trials);
+console.log(main_trials[1].vignette);
+//console.log(main_trial_new[1].condition);
+console.log(main_trial_new);
 
-  if (main_trials.vignette[i] == "0" || "6" || "9" || "none") {
-    choice_main_trials[i] = main_trials[i]
-  }
-}
+// trial_block = _.flatten(_.map(main_trials, function (x) {
+//         return (create_trials(main_trials));
+//       }

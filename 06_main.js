@@ -20,7 +20,7 @@ $("document")
             instructions,
             practice_block,
             instructions2,
-            //main_block,
+            main_block,
             forced_choice_2A,
             post_test,
             thanks,

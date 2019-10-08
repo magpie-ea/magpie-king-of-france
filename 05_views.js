@@ -124,10 +124,10 @@ const forced_choice_2A = magpieViews.view_generator("forced_choice", {
 
 const practice_block = magpieViews.view_generator("forced_choice", {
   // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: practice_trials.length,
+  trials: practice_trial_new.length,
   // name should be identical to the variable name
   name: 'practice_trials',
-  data: practice_trials,
+  data: practice_trial_new,
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
@@ -136,10 +136,10 @@ const practice_block = magpieViews.view_generator("forced_choice", {
 
 const main_block = magpieViews.view_generator("forced_choice", {
   // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: choice_main_trials.length,
+  trials: main_trial_new.length,
   // name should be identical to the variable name
   name: 'main_trials',
-  data: choice_main_trials,
+  data: main_trial_new,
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
