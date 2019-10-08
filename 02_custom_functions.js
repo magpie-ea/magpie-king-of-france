@@ -10,7 +10,7 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 
 
 /* Helper functions*/
-// function takes main trials as input
+// function takes practice_trials as input (former statements becomes question)
 function create_practice_trials(old_trials) {
 
   var trials = [];
@@ -33,7 +33,7 @@ function create_practice_trials(old_trials) {
 
 };
 
-
+// function takes main_trials as input (former sentence becomes question -exept from that both functions are the same)
 function create_main_trials(old_trials) {
 
   var trials = [];
