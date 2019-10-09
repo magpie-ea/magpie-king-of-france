@@ -12,10 +12,8 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 /* Helper functions*/
 // function takes practice_trials as input (former statements becomes question)
 function create_practice_trials(old_trials) {
-
   var trials = [];
   var i = 0;
-
   for (var k = 0; k < old_trials.length; k++) {
     trials[i] = {
       option1: "FALSE",
@@ -29,16 +27,12 @@ function create_practice_trials(old_trials) {
     i += 1;
   }
   return (trials);
-
-
 };
 
 // function takes main_trials as input (former sentence becomes question -exept from that both functions are the same)
 function create_main_trials(old_trials) {
-
   var trials = [];
   var i = 0;
-
   for (var k = 0; k < old_trials.length; k++) {
     if ((old_trials[k].condition == 0) || (old_trials[k].condition == 6) || (old_trials[k].condition == 9)) {
       trials[i] = {
@@ -54,9 +48,7 @@ function create_main_trials(old_trials) {
     }
   }
   return (trials);
-
 };
-
 
 
 /* For generating random participant IDs */

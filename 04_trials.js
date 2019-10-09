@@ -1,5 +1,4 @@
 // In this file you can specify the trial data for your experiment
-
 var practice_trials = [
   {
     statements: "Spain is a country in Asia.",
@@ -1364,10 +1363,12 @@ var main_trials = [
     vignette: "none",
     expectedAnswer: "true"
   },
-
-
 ];
 
+/* call create_practice_trials function with practice_trials to get practice
+trials into the wanted format */
 const practice_trial_new = _.shuffle(create_practice_trials(practice_trials));
 
+/* call create_main_trials function with the main_trials to get the main trails
+into the wanted format */
 const main_trial_new = _.shuffle(create_main_trials(main_trials));
