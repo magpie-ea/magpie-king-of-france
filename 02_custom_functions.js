@@ -18,8 +18,8 @@ function create_practice_trials(old_trials) {
 
   for (var k = 0; k < old_trials.length; k++) {
     trials[i] = {
-      option1: "false",
-      option2: "true",
+      option1: "FALSE",
+      option2: "TRUE",
       question: old_trials[k].statements,
       type: old_trials[k].type,
       condition: old_trials[k].condition,
@@ -42,8 +42,8 @@ function create_main_trials(old_trials) {
   for (var k = 0; k < old_trials.length; k++) {
     if ((old_trials[k].condition == 0) || (old_trials[k].condition == 6) || (old_trials[k].condition == 9)) {
       trials[i] = {
-        option1: "false",
-        option2: "true",
+        option1: "FALSE",
+        option2: "TRUE",
         question: old_trials[k].sentence,
         type: old_trials[k].type,
         condition: old_trials[k].condition,
