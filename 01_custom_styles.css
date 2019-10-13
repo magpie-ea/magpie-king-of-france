@@ -3,8 +3,7 @@
 /* Example of extending a given magpie-style */
 
 .magpie-view-stimulus-container {
-    height: auto;
-    max-height: 350px;
+    height: 0px;
 }
 
 /* Display all titles in red */

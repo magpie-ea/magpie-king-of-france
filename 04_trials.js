@@ -201,7 +201,6 @@ var main_trials = [
     type: "main",
     condition: "8",
     vignette: "2",
-    vignette: "2",
     expectedAnswer: "false"
   },
 
@@ -497,7 +496,7 @@ var main_trials = [
     sentence: "The Pope is currently not married.",
     type: "special",
     condition: "none",
-    vignette: "2",
+    vignette: "3",
     expectedAnswer: "true"
   },
 
@@ -505,7 +504,7 @@ var main_trials = [
     sentence: "Canada is a democracy.",
     type: "special",
     condition: "none",
-    vignette: "3",
+    vignette: "2",
     expectedAnswer: "true"
   },
 
@@ -1371,4 +1370,39 @@ const practice_trial_new = _.shuffle(create_practice_trials(practice_trials));
 
 /* call create_main_trials function with the main_trials to get the main trails
 into the wanted format */
-const main_trial_new = _.shuffle(create_main_trials(main_trials));
+// const main_trial_new = _.shuffle(create_main_trials(main_trials, 10, 1));
+
+const vignette_set = _.shuffle([1,2,3,4,5]);
+const condition_set = _.shuffle([0,6,9,1,10]);
+const filler_set = create_filler_trials(_.sampleSize(_.filter(main_trials, function(t) {return t.type == "filler"}),20));
+
+console.log(create_filler_trials(filler_set));
+
+var  main_trial_new = _.concat(
+    filler_set[0],
+    filler_set[1],
+    create_main_trials(main_trials, condition_set[0], vignette_set[0]),
+    filler_set[2],
+    filler_set[3],
+    filler_set[4],
+    create_main_trials(main_trials, condition_set[1], vignette_set[1]),
+    filler_set[5],
+    create_main_trials(main_trials, condition_set[2], vignette_set[2]),
+    filler_set[6],
+    create_main_trials(main_trials, "none", vignette_set[0]),
+    filler_set[7],
+    create_main_trials(main_trials, condition_set[3], vignette_set[3]),
+    filler_set[8],
+    filler_set[9],
+    create_main_trials(main_trials, "none", vignette_set[1]),
+    filler_set[10],
+    create_main_trials(main_trials, "none", vignette_set[2]),
+    create_main_trials(main_trials, condition_set[4], vignette_set[4]),
+    filler_set[11],
+    filler_set[12],
+    create_main_trials(main_trials, "none", vignette_set[3]),
+    filler_set[13],
+    create_main_trials(main_trials, "none", vignette_set[4])
+);
+
+console.log(main_trial_new);

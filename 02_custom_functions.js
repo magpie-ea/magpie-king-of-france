@@ -29,12 +29,30 @@ function create_practice_trials(old_trials) {
   return (trials);
 };
 
-// function takes main_trials as input (former sentence becomes question -exept from that both functions are the same)
-function create_main_trials(old_trials) {
+function create_filler_trials(old_trials) {
+    var trials = [];
+    var i = 0;
+    for (var k = 0; k < old_trials.length; k++) {
+        trials[i] = {
+            option1: "FALSE",
+            option2: "TRUE",
+            question: old_trials[k].sentence,
+            type: old_trials[k].type,
+            condition: old_trials[k].condition,
+            vignette: old_trials[k].vignette,
+            expectedAnswer: old_trials[k].expectedAnswer
+        };
+        i += 1;
+    }
+    return (trials);
+};
+
+// function takes main_trials as input (former sentence becomes question -exept from that both functions are the same), returns all trials for a given condition
+function create_main_trials(old_trials, cond, vignette) {
   var trials = [];
   var i = 0;
   for (var k = 0; k < old_trials.length; k++) {
-    if ((old_trials[k].condition == 0) || (old_trials[k].condition == 6) || (old_trials[k].condition == 9)) {
+      if ((old_trials[k].condition == cond) && (old_trials[k].vignette == vignette)) {
       trials[i] = {
         option1: "FALSE",
         option2: "TRUE",
@@ -49,6 +67,8 @@ function create_main_trials(old_trials) {
   }
   return (trials);
 };
+
+//function to select the trials each participant should see
 
 
 /* For generating random participant IDs */
