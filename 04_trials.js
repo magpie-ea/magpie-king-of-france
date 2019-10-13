@@ -557,7 +557,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Brain needs a constant supply of oxygen to perform basic functions.",
+    sentence: "The brain needs a constant supply of oxygen to perform basic functions.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -589,7 +589,7 @@ var main_trials = [
   },
 
   {
-    sentence: "An earthquake is the result of the sudden movement of the earth’s tectonic plate.",
+    sentence: "An earthquake is the result of the sudden movement of the earth’s tectonic plates.",
     type: "filler",
     condition: "none",
     vignette: "none",

@@ -23,14 +23,16 @@ const intro = magpieViews.view_generator("intro", {
   trials: 1,
   name: 'intro',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `This is a sample introduction view.
+    text: `Thank you for taking part in this experiment.
             <br />
             <br />
-            The introduction view welcomes the participant and gives general information
-            about the experiment. You are in the <strong>${coin}</strong> group.
+            Participation in this experiment is voluntary. You may quit at any moment without negative consequences.
             <br />
             <br />
-            This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
+            The data from this experiment will be used for scientific purposes only. It will be stored anonymously and may be shared with other scientists.
+            <br />
+            <br />
+            By proceeding you indicate that you have read, understood and that you agree with these terms.`,
   buttonText: 'begin the experiment'
 });
 
@@ -39,19 +41,23 @@ const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
   title: 'General Instructions',
-  text: `This is a sample instructions view.
-            <br />
-            <br />
-            Tell your participants what they are to do here.`,
-  buttonText: 'go to example trials'
+  text: `In this experiment you will be shown simple sentences. Your task is to judge whether they are true or false based on common world knowledge. If you are not sure how to evaluate a sentence (maybe because you lack knowledge of the relevant facts, or maybe because the sentence isn't clear to you), just give your intuitive best guess.
+  <br />
+  <br />
+  <strong>Please read all of the sentences carefully before giving an answer!</strong>
+  <br />
+  <br />
+  We will start with a few practice rounds.
+  `,
+  buttonText: 'Start Practice!'
 });
 
 const instructions2 = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions2',
-  title: 'Now the experiment starts',
-  text: ``,
-  buttonText: 'go to experiment'
+  title: 'Getting ready!',
+    text: `If you are ready, press the button below to start the main part of the experiment.`,
+  buttonText: 'go to experiment!'
 });
 
 // In the post test questionnaire you can ask your participants addtional questions
