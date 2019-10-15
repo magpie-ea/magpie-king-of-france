@@ -341,7 +341,7 @@ var main_trials = [
   },
 
   {
-    sentence: "The Belgian rainforest, it is the favourite nature spot of Donald Trump.",
+    sentence: "The Belgian rainforest, it is the favorite nature spot of Donald Trump.",
     type: "main",
     condition: "4",
     vignette: "4",
@@ -349,7 +349,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Donald Trump, his favourite nature spot is the Belgian rainforest.",
+    sentence: "Donald Trump, his favorite nature spot is the Belgian rainforest.",
     type: "main",
     condition: "5",
     vignette: "4",
@@ -381,7 +381,7 @@ var main_trials = [
   },
 
   {
-    sentence: "The Belgian rainforest, it is not the favourite nature spot of Donald Trump.",
+    sentence: "The Belgian rainforest, it is not the favorite nature spot of Donald Trump.",
     type: "main",
     condition: "9",
     vignette: "4",
@@ -389,7 +389,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Donald Trump, his favourite nature spot is not the Belgian rainforest.",
+    sentence: "Donald Trump, his favorite nature spot is not the Belgian rainforest.",
     type: "main",
     condition: "10",
     vignette: "4",
@@ -1236,7 +1236,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Birds are a group of vertebrates, characterised by feathers and wings.",
+    sentence: "Birds are a group of vertebrates, characterized by feathers and wings.",
     type: "filler",
     condition: "none",
     vignette: "none",
