@@ -11,7 +11,7 @@ var practice_trials = [
     statements: "Normally there are 32 teeth in the adult human body.",
     type: "practice",
     condition: "none",
-    expectedAnswer: "True"
+    expectedAnswer: "true"
   },
 
 
@@ -19,7 +19,7 @@ var practice_trials = [
     statements: "Alexander Bell invented the telephone.",
     type: "practice",
     condition: "none",
-    expectedAnswer: "True"
+    expectedAnswer: "true"
   },
 
 
@@ -27,7 +27,7 @@ var practice_trials = [
     statements: "World War II was a global war that lasted from 1914 to 1918.",
     type: "practice",
     condition: "none",
-    expectedAnswer: "False"
+    expectedAnswer: "false"
   },
 
 
@@ -35,7 +35,7 @@ var practice_trials = [
     statements: "William Shakespeare was an English poet, playwright and actor, regarded as the greatest writer in the English language.",
     type: "practice",
     condition: "none",
-    expectedAnswer: "True"
+    expectedAnswer: "true"
   },
 
     ];

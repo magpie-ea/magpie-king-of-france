@@ -23,7 +23,7 @@ const intro = magpieViews.view_generator("intro", {
   trials: 1,
   name: 'intro',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-    text: `Thank you for taking part in this experiment.
+  text: `Thank you for taking part in this experiment.
             <br />
             <br />
             Participation in this experiment is voluntary. You may quit at any moment without negative consequences.
@@ -44,7 +44,7 @@ const instructions = magpieViews.view_generator("instructions", {
   text: `In this experiment you will be shown simple sentences. Your task is to judge whether they are true or false based on common world knowledge. If you are not sure how to evaluate a sentence (maybe because you lack knowledge of the relevant facts, or maybe because the sentence isn't clear to you), just give your intuitive best guess.
   <br />
   <br />
-  <strong>Please read all of the sentences carefully before giving an answer!</strong>
+  <strong>Please read each of the sentences carefully before giving an answer!</strong>
   <br />
   <br />
   We will start with a few practice rounds.
@@ -56,7 +56,7 @@ const instructions2 = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions2',
   title: 'Getting ready!',
-    text: `If you are ready, press the button below to start the main part of the experiment.`,
+  text: `If you are ready, press the button below to start the main part of the experiment.`,
   buttonText: 'go to experiment!'
 });
 
