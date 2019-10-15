@@ -213,7 +213,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Dresden , it is not the home of the Emperor of Canada for the summer.",
+    sentence: "Dresden, it is not the home of the Emperor of Canada for the summer.",
     type: "main",
     condition: "10",
     vignette: "2",
@@ -525,7 +525,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Germany shares borders with France, Belgium, Denmark.",
+    sentence: "Germany shares borders with France, Belgium and Denmark.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -573,7 +573,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Steve jobs was an American inventor and co-founder of Apple.",
+    sentence: "Steve Jobs was an American inventor and co-founder of Apple.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -581,7 +581,7 @@ var main_trials = [
   },
 
   {
-    sentence: "The United Nations Children's Fund  (UNICEF) provides humanitarian and developmental assistance to children and mothers in developing countries.",
+    sentence: "The United Nations Children's Fund (UNICEF) provides humanitarian and developmental assistance to children and mothers in developing countries.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -669,7 +669,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Planet Earth is part of the galaxy ‘Milky way’.",
+    sentence: "Planet Earth is part of the galaxy ‘Milky Way’.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -677,7 +677,7 @@ var main_trials = [
   },
 
   {
-    sentence: "The Solar system includes the planet Earth.",
+    sentence: "The Solar System includes the planet Earth.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -1156,7 +1156,7 @@ var main_trials = [
   },
 
   {
-    sentence: "Johnny Depp is an American actor who took part in the ‘Pirates in the Caribbean’ films.",
+    sentence: "Johnny Depp is an American actor who took part in the ‘Pirates of the Caribbean’ movies.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -1284,7 +1284,7 @@ var main_trials = [
   },
 
   {
-    sentence: "In the german language every noun has a gender.",
+    sentence: "In the German language every noun has a gender.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -1292,7 +1292,7 @@ var main_trials = [
   },
 
   {
-    sentence: "One of the longest river in Europe is the Rhine.",
+    sentence: "One of the longest rivers in Europe is the Rhine.",
     type: "filler",
     condition: "none",
     vignette: "none",
@@ -1372,37 +1372,39 @@ const practice_trial_new = _.shuffle(create_practice_trials(practice_trials));
 into the wanted format */
 // const main_trial_new = _.shuffle(create_main_trials(main_trials, 10, 1));
 
-const vignette_set = _.shuffle([1,2,3,4,5]);
-const condition_set = _.shuffle([0,6,9,1,10]);
-const filler_set = create_filler_trials(_.sampleSize(_.filter(main_trials, function(t) {return t.type == "filler"}),20));
+const vignette_set = _.shuffle([1, 2, 3, 4, 5]);
+const condition_set = _.shuffle([0, 6, 9, 1, 10]);
+const filler_set = create_filler_trials(_.sampleSize(_.filter(main_trials, function (t) {
+  return t.type == "filler"
+}), 20));
 
 console.log(create_filler_trials(filler_set));
 
-var  main_trial_new = _.concat(
-    filler_set[0],
-    filler_set[1],
-    create_main_trials(main_trials, condition_set[0], vignette_set[0]),
-    filler_set[2],
-    filler_set[3],
-    filler_set[4],
-    create_main_trials(main_trials, condition_set[1], vignette_set[1]),
-    filler_set[5],
-    create_main_trials(main_trials, condition_set[2], vignette_set[2]),
-    filler_set[6],
-    create_main_trials(main_trials, "none", vignette_set[0]),
-    filler_set[7],
-    create_main_trials(main_trials, condition_set[3], vignette_set[3]),
-    filler_set[8],
-    filler_set[9],
-    create_main_trials(main_trials, "none", vignette_set[1]),
-    filler_set[10],
-    create_main_trials(main_trials, "none", vignette_set[2]),
-    create_main_trials(main_trials, condition_set[4], vignette_set[4]),
-    filler_set[11],
-    filler_set[12],
-    create_main_trials(main_trials, "none", vignette_set[3]),
-    filler_set[13],
-    create_main_trials(main_trials, "none", vignette_set[4])
+var main_trial_new = _.concat(
+  filler_set[0],
+  filler_set[1],
+  create_main_trials(main_trials, condition_set[0], vignette_set[0]),
+  filler_set[2],
+  filler_set[3],
+  filler_set[4],
+  create_main_trials(main_trials, condition_set[1], vignette_set[1]),
+  filler_set[5],
+  create_main_trials(main_trials, condition_set[2], vignette_set[2]),
+  filler_set[6],
+  create_main_trials(main_trials, "none", vignette_set[0]),
+  filler_set[7],
+  create_main_trials(main_trials, condition_set[3], vignette_set[3]),
+  filler_set[8],
+  filler_set[9],
+  create_main_trials(main_trials, "none", vignette_set[1]),
+  filler_set[10],
+  create_main_trials(main_trials, "none", vignette_set[2]),
+  create_main_trials(main_trials, condition_set[4], vignette_set[4]),
+  filler_set[11],
+  filler_set[12],
+  create_main_trials(main_trials, "none", vignette_set[3]),
+  filler_set[13],
+  create_main_trials(main_trials, "none", vignette_set[4])
 );
 
 console.log(main_trial_new);

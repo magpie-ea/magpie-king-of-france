@@ -1,14 +1,5 @@
 // Here, you can define all custom functions, you want to use and initialize some variables
 
-/* Variables
- *
- *
- */
-const coin = _.sample(["head", "tail"]); // You can determine global (random) parameters here
-// Declare your variables here
-
-
-
 /* Helper functions*/
 // function takes practice_trials as input (former statements becomes question)
 function create_practice_trials(old_trials) {
@@ -30,21 +21,21 @@ function create_practice_trials(old_trials) {
 };
 
 function create_filler_trials(old_trials) {
-    var trials = [];
-    var i = 0;
-    for (var k = 0; k < old_trials.length; k++) {
-        trials[i] = {
-            option1: "FALSE",
-            option2: "TRUE",
-            question: old_trials[k].sentence,
-            type: old_trials[k].type,
-            condition: old_trials[k].condition,
-            vignette: old_trials[k].vignette,
-            expectedAnswer: old_trials[k].expectedAnswer
-        };
-        i += 1;
-    }
-    return (trials);
+  var trials = [];
+  var i = 0;
+  for (var k = 0; k < old_trials.length; k++) {
+    trials[i] = {
+      option1: "FALSE",
+      option2: "TRUE",
+      question: old_trials[k].sentence,
+      type: old_trials[k].type,
+      condition: old_trials[k].condition,
+      vignette: old_trials[k].vignette,
+      expectedAnswer: old_trials[k].expectedAnswer
+    };
+    i += 1;
+  }
+  return (trials);
 };
 
 // function takes main_trials as input (former sentence becomes question -exept from that both functions are the same), returns all trials for a given condition
@@ -52,7 +43,7 @@ function create_main_trials(old_trials, cond, vignette) {
   var trials = [];
   var i = 0;
   for (var k = 0; k < old_trials.length; k++) {
-      if ((old_trials[k].condition == cond) && (old_trials[k].vignette == vignette)) {
+    if ((old_trials[k].condition == cond) && (old_trials[k].vignette == vignette)) {
       trials[i] = {
         option1: "FALSE",
         option2: "TRUE",
@@ -71,6 +62,11 @@ function create_main_trials(old_trials, cond, vignette) {
 //function to select the trials each participant should see
 
 
+
+/* more helper functions, not in use right now */
+
+const coin = _.sample(["head", "tail"]); // You can determine global (random) parameters here
+
 /* For generating random participant IDs */
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 // dec2hex :: Integer -> String
@@ -85,14 +81,7 @@ const generateID = function (len) {
   return Array.from(arr, this.dec2hex)
     .join("");
 };
-// Declare your helper functions here
 
-
-
-/* Hooks
- *
- *
- */
 
 // Error feedback if participants exceeds the time for responding
 const time_limit = function (data, next) {
@@ -120,11 +109,3 @@ check_response = function (data, next) {
       next();
     })
 }
-
-// Declare your hooks here
-
-
-/* Generators for custom view templates, answer container elements and enable response functions
- *
- *
- */
