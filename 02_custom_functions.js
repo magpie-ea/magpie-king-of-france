@@ -13,7 +13,7 @@ function create_practice_trials(old_trials) {
       type: old_trials[k].type,
       condition: old_trials[k].condition,
       vignette: old_trials[k].vignette,
-      expectedAnswer: old_trials[k].expectedAnswer
+      correct: old_trials[k].expectedAnswer
     };
     i += 1;
   }
@@ -31,7 +31,7 @@ function create_filler_trials(old_trials) {
       type: old_trials[k].type,
       condition: old_trials[k].condition,
       vignette: old_trials[k].vignette,
-      expectedAnswer: old_trials[k].expectedAnswer
+      correct: old_trials[k].expectedAnswer
     };
     i += 1;
   }
@@ -51,7 +51,8 @@ function create_main_trials(old_trials, cond, vignette) {
         type: old_trials[k].type,
         condition: old_trials[k].condition,
         vignette: old_trials[k].vignette,
-        expectedAnswer: old_trials[k].expectedAnswer
+        correct: old_trials[k].expectedAnswer
+
       };
       i += 1;
     }
