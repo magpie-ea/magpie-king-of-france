@@ -1,7 +1,8 @@
 // Here, you can define all custom functions, you want to use and initialize some variables
 
 /* Helper functions*/
-// function takes practice_trials as input (former statements becomes question)
+/* function to generate the practice trials. takes the old practice_trials as input
+and converts them into the wanted format, which is also given as output. (former statements attribute becomes question)*/
 function create_practice_trials(old_trials) {
   var trials = [];
   var i = 0;
@@ -20,6 +21,8 @@ function create_practice_trials(old_trials) {
   return (trials);
 };
 
+/* function to generate the filler trials. takes the main trials as input
+and converts them into the wanted format, which is also given as output. */
 function create_filler_trials(old_trials) {
   var trials = [];
   var i = 0;
@@ -38,7 +41,9 @@ function create_filler_trials(old_trials) {
   return (trials);
 };
 
-// function takes main_trials as input (former sentence becomes question -exept from that both functions are the same), returns all trials for a given condition
+/* function to generate the main trials. takes the old main_trials, the
+condition and the vignette as input and returns the main trials for each
+participant individually in the correct format */
 function create_main_trials(old_trials, cond, vignette) {
   var trials = [];
   var i = 0;
@@ -52,16 +57,12 @@ function create_main_trials(old_trials, cond, vignette) {
         condition: old_trials[k].condition,
         vignette: old_trials[k].vignette,
         correct: old_trials[k].expectedAnswer
-
       };
       i += 1;
     }
   }
   return (trials);
 };
-
-//function to select the trials each participant should see
-
 
 
 /* more helper functions, not in use right now */

@@ -1368,18 +1368,19 @@ var main_trials = [
 trials into the wanted format */
 const practice_trial_new = _.shuffle(create_practice_trials(practice_trials));
 
-/* call create_main_trials function with the main_trials to get the main trails
-into the wanted format */
-// const main_trial_new = _.shuffle(create_main_trials(main_trials, 10, 1));
+/* helper constants to select the trials each participant should see */
 
 const vignette_set = _.shuffle([1, 2, 3, 4, 5]);
 const condition_set = _.shuffle([0, 6, 9, 1, 10]);
+
+/*  create filler trials for each participant*/
 const filler_set = create_filler_trials(_.sampleSize(_.filter(main_trials, function (t) {
   return t.type == "filler"
 }), 20));
 
-console.log(create_filler_trials(filler_set));
-
+/* generate the main trials used for each participant. for this we use some filler old_trials
+and call the create_main_trials function with the main_trials to get the main trails
+into the wanted format */
 var main_trial_new = _.concat(
   filler_set[0],
   filler_set[1],
@@ -1406,5 +1407,3 @@ var main_trial_new = _.concat(
   filler_set[13],
   create_main_trials(main_trials, "none", vignette_set[4])
 );
-
-console.log(main_trial_new);
