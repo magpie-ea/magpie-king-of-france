@@ -13,7 +13,7 @@ function create_practice_trials(old_trials) {
       question: old_trials[k].statements,
       type: old_trials[k].type,
       condition: old_trials[k].condition,
-      vignette: old_trials[k].vignette,
+      vignette: "undefined",
       correct: old_trials[k].expectedAnswer
     };
     i += 1;

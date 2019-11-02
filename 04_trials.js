@@ -1375,7 +1375,7 @@ const condition_set = _.shuffle([0, 6, 9, 1, 10]);
 
 /*  create filler trials for each participant*/
 const filler_set = create_filler_trials(_.sampleSize(_.filter(main_trials, function (t) {
-  return t.type == "filler"
+    return t.type == "filler";
 }), 20));
 
 /* generate the main trials used for each participant. for this we use some filler old_trials
