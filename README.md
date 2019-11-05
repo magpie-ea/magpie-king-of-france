@@ -1,6 +1,6 @@
 # King of France
 
-Replication of experiment version by Abursán and Szendroi (2013)
+Replication of the experiment reported by Abursán and Szendroi ([2013](https://semprag.org/article/view/sp.6.10)). Items for this replication were created by Mina Bakharzi, Vasilena Voynikova & Conor McCullough, as part of a course project.
 
 
 ## \_magpie
